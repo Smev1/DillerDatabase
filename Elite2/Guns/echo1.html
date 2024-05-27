@@ -32,34 +32,33 @@
             background-color: #4d4b4b;
         }
         main {
-            display: flex;
-            flex-direction: column;
             padding: 20px;
             max-width: 1200px;
-            margin: 0;
+            margin: 0 auto;
         }
         .image {
             width: 100%;
             max-width: 300px;
             height: auto;
-            margin: 10px;
+            display: block;
+            margin: 0 auto 20px;
         }
         .section {
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: left;
             margin-bottom: 20px;
-            text-align: left; /* Align text to the left */
         }
         .section h2 {
             color: #ffa500;
             text-align: left;
+        
         }
-        .section p {
-            text-align: left;
-        }
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-start; /* Align images to the start (left) */
-            gap: 10px;
+        {
+            p {
+                text-align: left;
+            }
         }
     </style>
 </head>
@@ -70,7 +69,7 @@
     </header>
 
     <nav>
-        <a href="/DillerDatabase/">Home</a>
+	    <a href="/DillerDatabase/">Home</a>
         <a href="/DillerDatabase/Elite2/">Elite 2.0</a>
         <a href="/DillerDatabase/Elite/">Elite</a>
         <a href="/DillerDatabase/zStrike/">Zombie Strike</a>
@@ -98,25 +97,20 @@
 
         <div class="section">
             <h2>Features</h2>
+          
             <p>The Echo is a slide-action clip system blaster similar to the N-Strike Elite Delta Trooper and Retaliator.
             It advertises itself as a "4-in-1" blaster, due to its compatibility with detachable barrel extensions and shoulder stocks.
-            Despite the attachments both having tactical rails on them, the blaster itself has none.
-            The Echo is also capable of being slam-fired.</p>
+             Despite the attachments both having tactical rails on them, the blaster itself has none.
+              The Echo is also capable of being slam-fired.</p>
         </div>
 
         <div class="section">
-            <h2>Personal Experience</h2>
-            <p>One of our personal favorite blasters as it rarely jams, has an acceptable range, and has many tactical rails</p>
+            <h2>Personal Experiance</h2>
+            
+            <p>One of our personal favorite blasters as it rarley Jams, has a acceptable range, and has many tactical rails</p>
         </div>
 
-        <div class="section gallery">
-            <h2>Gallery</h2>
-            <p>Include a gallery of images or videos showing the gun in action, detailed close-ups, and any other relevant visuals.</p>
-            <img src="/DillerDatabase/Images/echoFull.jpg" alt="Picture of Echo with all attachments opposite side of gun from picture above" class="image">
-            <img src="/DillerDatabase/Images/echoBare.jpg" alt="Picture of Echo Without attachments" class="image">
-            <img src="/DillerDatabase/Images/echoBarrel.jpg" alt="Picture of Echo Barrel" class="image">
-            <img src="/DillerDatabase/Images/echoStock.jpg" alt="Picture of Echo Stock" class="image">
-        </div>
+        
     </main>
 </body>
 </html>
