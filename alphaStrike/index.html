@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html en="eng">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nerf Database</title>
+    <title>Alpha Strike Collection - Diller Database</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,7 +12,7 @@
             background-color: #f4f4f4;
         }
         header {
-            background-color: #Ffa500;
+            background-color: #ffa500;
             color: white;
             padding: 10px 0;
             text-align: center;
@@ -35,12 +35,33 @@
             padding: 20px;
             max-width: 1200px;
             margin: 0 auto;
-            </style>
+        }
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .gun-button {
+            flex: 1;
+            min-width: 200px;
+            margin: 10px;
+            padding: 10px;
+            background-color: #ffa500;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .gun-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Diller Database</h1>
-        <p>Database for Nerf Gun stats, functonality, and ownership</p>
+        <h1>Alpha Strike Collection</h1>
+        <p>Discover the latest and greatest in the Nerf Alpha Strike series</p>
     </header>
 
     <nav>
@@ -54,31 +75,14 @@
     </nav>
 
     <main>
-        <section id="Elite2">
-            <h2>Elite 2.0</h2>
-            <p>PLACEHOLDER</p>
-        </section>
-
-        <section id="Elite">
-            <h2>Elite</h2>
-            <p>PLACEHOLDER</p>
-        </section>
-
-        <section id="zStrike">
-            <h2>Zombie Strike</h2>
-            <p>PLACEHOLDER</p>
-        </section>
-
-        <section id="Alpha">
-            <h2>Alpha Strike</h2>
-            <p>PLACEHOLDER</p>
-        </section>
-
-        <section id="Broken">
-            <h2>Broken</h2>
-            <p>PLACEHOLDER</p>
-        </section>
+        <h2>Select Your Nerf Gun</h2>
+        <div class="button-container">
+            <a class="gun-button" href="">PlaceHolder</a>
+            <a class="gun-button" href="">PlaceHolder</a>
+            <a class="gun-button" href="">PlaceHolder</a>
+            <a class="gun-button" href="">PlaceHolder</a>
+            <a class="gun-button" href="">Placeholder</a>
+        </div>
     </main>
-
-    </body>
+</body>
 </html>
