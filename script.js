@@ -2,7 +2,7 @@
 
 function loadHeader() {
     // Adjust the path to header.html relative to the location of script.js
-    const headerPath = getBasePath() + 'Users/evand/Documents/GitHub/DillerDatabase/header.html';
+    const headerPath = getBasePath() + 'header.html';
     fetch(headerPath)
         .then(response => {
             if (!response.ok) {
