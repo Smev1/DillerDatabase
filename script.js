@@ -2,7 +2,7 @@
 
 function loadHeader() {
     // Adjust the path to header.html relative to the location of script.js
-    const headerPath = getBasePath() + 'https://smev1.github.io/DillerDatabase/header.html';
+    const headerPath = getBasePath() + '/DillerDatabase/header.html';
     fetch(headerPath)
         .then(response => {
             if (!response.ok) {
