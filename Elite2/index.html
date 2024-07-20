@@ -6,35 +6,25 @@
     <title>Elite 2.0 Collection - Diller Database</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
-        }
-        header {
-            background-color: #ffa500;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #333;
-        }
-        nav a {
-            color: white;
-            padding: 14px 20px;
-            text-decoration: none;
-            text-align: center;
-        }
-        nav a:hover {
-            background-color: #4d4b4b;
+            color: #333;
         }
         main {
             padding: 20px;
             max-width: 1200px;
-            margin: 0 auto;
+            margin: 20px auto;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+        }
+        h2 {
+            font-size: 2em;
+            border-bottom: 2px solid #ffa500;
+            padding-bottom: 10px;
+            margin-top: 0;
         }
         .button-container {
             display: flex;
@@ -49,33 +39,22 @@
             background-color: #ffa500;
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 20px;
             cursor: pointer;
             text-align: center;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
         }
         .gun-button:hover {
-            background-color: #0056b3;
+            background-color: #e69500;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Elite 2.0 Collection</h1>
-        <p>Discover the latest and greatest in the Nerf Elite 2.0 series</p>
-    </header>
-
-    <nav>
-	    <a href="/DillerDatabase/">Home</a>
-        <a href="/DillerDatabase/Elite2/">Elite 2.0</a>
-        <a href="/DillerDatabase/Elite/">Elite</a>
-        <a href="/DillerDatabase/zStrike/">Zombie Strike</a>
-        <a href="/DillerDatabase/alphaStrike/">Alpha Strike</a>
-        <a href="/DillerDatabase/Broken/">Broken</a>
-        <a href="/DillerDatabase/Other/">Other</a>
-    </nav>
+    <div id="header-placeholder"></div>
 
     <main>
-        <h2>Select Your Nerf Gun</h2>
+        <h2>Select Elite 2.0 Your Nerf Gun</h2>
         <div class="button-container">
             <a class="gun-button" href="/DillerDatabase/Elite2/Guns/echo.html">Echo CS-10</a>
             <a class="gun-button" href="/DillerDatabase/Elite2/Guns/tetrad.html">Tetrad QS-4</a>
@@ -84,5 +63,7 @@
             <a class="gun-button" href="">Placeholder</a>
         </div>
     </main>
+
+    <script src="/DillerDatabase/script.js"></script>
 </body>
 </html>
