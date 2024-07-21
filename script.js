@@ -30,8 +30,7 @@ function attachSearchFunctionality() {
 
     document.getElementById('searchButton').addEventListener('click', () => {
         const query = document.getElementById('search').value.toLowerCase();
-        console.log('Search query:', query); // Debugging line
-        const preview = document.getElementById('preview');
+        const popupContent = document.getElementById('popupContent');
         let results = '';
 
         pages.forEach(page => {
@@ -41,15 +40,25 @@ function attachSearchFunctionality() {
         });
 
         if (results) {
-            preview.innerHTML = results;
-            preview.style.display = 'block';
-            console.log('Search results:', results); // Debugging line
+            popupContent.innerHTML = results;
+            showPopup();
         } else {
-            preview.innerHTML = 'No results found';
-            preview.style.display = 'block';
-            console.log('No results found'); // Debugging line
+            popupContent.innerHTML = 'No results found';
+            showPopup();
         }
     });
+
+    document.getElementById('closePopup').addEventListener('click', () => {
+        hidePopup();
+    });
+}
+
+function showPopup() {
+    document.getElementById('popup').style.display = 'block';
+}
+
+function hidePopup() {
+    document.getElementById('popup').style.display = 'none';
 }
 
 document.addEventListener('DOMContentLoaded', loadHeader);

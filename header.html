@@ -26,7 +26,7 @@
             background-color: #4d4b4b;
         }
         .search-container {
-            margin-top: 20px;
+            margin: 10px 0;
             text-align: center;
         }
         .search-container input {
@@ -49,6 +49,7 @@
         }
         #preview {
             margin-top: 20px;
+            display: none;
         }
         #preview div {
             margin: 10px 0;
@@ -59,6 +60,35 @@
         }
         #preview a:hover {
             text-decoration: underline;
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            z-index: 1000;
+        }
+        .popup div {
+            margin-bottom: 10px;
+        }
+        .popup button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            border-radius: 20px;
+            background-color: #ffa500;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .popup button:hover {
+            background-color: #e69500;
         }
     </style>
 </head>
@@ -82,6 +112,12 @@
         <input type="text" id="search" placeholder="Search for pages...">
         <button id="searchButton">Search</button>
     </div>
-    <div id="preview" style="display: none;"></div>
+    <div id="preview"></div>
+    <div id="popup" class="popup">
+        <div id="popupContent"></div>
+        <button id="closePopup">Close</button>
+    </div>
+
+    <script src="/DillerDatabase/js/script.js"></script>
 </body>
 </html>
