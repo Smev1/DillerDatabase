@@ -25,7 +25,6 @@ function attachSearchFunctionality() {
         { title: "Alpha Strike", url: "/DillerDatabase/alphaStrike/" },
         { title: "Broken", url: "/DillerDatabase/Broken/" },
         { title: "Other", url: "/DillerDatabase/Other/" }
-        // Add new pages here
     ];
 
     document.getElementById('searchButton').addEventListener('click', () => {
