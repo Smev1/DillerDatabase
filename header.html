@@ -1,11 +1,74 @@
-<!-- header.html -->
-<header>
-    <h1>Diller Database</h1>
-    <p>Database for Nerf Gun stats, functionality, and ownership</p>
-</header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header - Diller Database</title>
+    <style>
+        header {
+            background-color: #ffa500;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #4d4b4b;
+        }
+        .search-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .search-container input {
+            padding: 10px;
+            width: 200px;
+            border-radius: 20px;
+            border: 1px solid #ccc;
+        }
+        .search-container button {
+            padding: 10px 20px;
+            border-radius: 20px;
+            background-color: #ffa500;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .search-container button:hover {
+            background-color: #e69500;
+        }
+        #preview {
+            margin-top: 20px;
+        }
+        #preview div {
+            margin: 10px 0;
+        }
+        #preview a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+        #preview a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Diller Database</h1>
+        <p>Database for Nerf Gun stats, functionality, and ownership</p>
+    </header>
 
-<nav>
-    <div class="menu">
+    <nav>
         <a href="/DillerDatabase/">Home</a>
         <a href="/DillerDatabase/Elite2/">Elite 2.0</a>
         <a href="/DillerDatabase/Elite/">Elite</a>
@@ -13,9 +76,12 @@
         <a href="/DillerDatabase/alphaStrike/">Alpha Strike</a>
         <a href="/DillerDatabase/Broken/">Broken</a>
         <a href="/DillerDatabase/Other/">Other</a>
+    </nav>
+
+    <div class="search-container">
+        <input type="text" id="search" placeholder="Search for pages...">
+        <button id="searchButton">Search</button>
     </div>
-    <div class="search-bar">
-        <input type="text" id="search" placeholder="Search titles...">
-        <button onclick="searchTitles()">Search</button>
-    </div>
-</nav>
+    <div id="preview" style="display: none;"></div>
+</body>
+</html>

@@ -1,8 +1,5 @@
-// script.js
-
 function loadHeader() {
-    // Adjust the path to header.html relative to the location of script.js
-    const headerPath = getBasePath() + '/DillerDatabase/header.html';
+    const headerPath = '/DillerDatabase/header.html';
     fetch(headerPath)
         .then(response => {
             if (!response.ok) {
@@ -19,19 +16,6 @@ function loadHeader() {
         });
 }
 
-function getBasePath() {
-    // Logic to determine the base path
-    const currentPath = window.location.pathname;
-    let depth = (currentPath.match(/\//g) || []).length - 1;
-    let basePath = '';
-
-    while (depth > 0) {
-        basePath += '../';
-        depth--;
-    }
-    return basePath;
-}
-
 function attachSearchFunctionality() {
     const pages = [
         { title: "Home", url: "/DillerDatabase/" },
@@ -41,10 +25,12 @@ function attachSearchFunctionality() {
         { title: "Alpha Strike", url: "/DillerDatabase/alphaStrike/" },
         { title: "Broken", url: "/DillerDatabase/Broken/" },
         { title: "Other", url: "/DillerDatabase/Other/" }
+        // Add new pages here
     ];
 
-    document.querySelector('button').addEventListener('click', () => {
+    document.getElementById('searchButton').addEventListener('click', () => {
         const query = document.getElementById('search').value.toLowerCase();
+        console.log('Search query:', query); // Debugging line
         const preview = document.getElementById('preview');
         let results = '';
 
@@ -57,8 +43,11 @@ function attachSearchFunctionality() {
         if (results) {
             preview.innerHTML = results;
             preview.style.display = 'block';
+            console.log('Search results:', results); // Debugging line
         } else {
-            preview.style.display = 'none';
+            preview.innerHTML = 'No results found';
+            preview.style.display = 'block';
+            console.log('No results found'); // Debugging line
         }
     });
 }
